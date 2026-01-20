@@ -18,3 +18,13 @@
 
 
         });
+        window.alert = function(message) {
+            const customAlert = document.createElement('div');
+            customAlert.className = 'custom-alert';     
+            customAlert.textContent = message;
+            document.body.appendChild(customAlert);
+            setTimeout(() => {
+                document.body.removeChild(customAlert);
+            }, 3000);
+        };
+            
